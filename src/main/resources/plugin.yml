@@ -1,0 +1,6 @@
+name: TNTFight
+version: '${project.version}'
+main: de.juliuskxyz.tntfight.TNTFight
+api-version: 1.20
+authors: [ Juliuskxyz ]
+description: 5v5 TNT Fight Plugin
