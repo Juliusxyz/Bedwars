@@ -1,15 +1,15 @@
 package de.juliuskxyz.tntfight.listeners
 
-import org.bukkit.event.entity.PlayerDeathEvent
 import org.bukkit.GameMode
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
-import org.bukkit.event.player.PlayerJoinEvent
+import org.bukkit.event.entity.PlayerDeathEvent
 
-class PlayerDeathListener : Listener {
+
+class PlayerDamageListener : Listener {
     @EventHandler
-    fun onPlayerDeath(e: PlayerDeathEvent) {
-        val p = e.player
+    fun onDeath(e: PlayerDeathEvent) {
+        val player = e.player
         e.player.gameMode = GameMode.SPECTATOR
     }
 }
