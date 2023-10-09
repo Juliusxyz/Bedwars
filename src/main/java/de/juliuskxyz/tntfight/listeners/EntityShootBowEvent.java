@@ -46,6 +46,11 @@ public class EntityShootBowEvent implements Listener {
                                 tnt.setTicksLived(5);
                                 tnt.setFuseTicks(2000);
                                 e.getProjectile().setPassenger(tnt);
+
+                                if (e.getProjectile().getHeight() > 10){
+                                    e.getProjectile().remove();
+                                }
+
                             }
                         }, 5L);
                     }
@@ -81,7 +86,7 @@ public class EntityShootBowEvent implements Listener {
                         if (getItemLoreInHand.contains(ExplodingArrows)) {
                             arrowProj.getPassenger().remove();
                             arrowProj.remove();
-                            arrowProj.getWorld().createExplosion(x, y, z, 4, false, false);
+                            arrowProj.getWorld().createExplosion(x, y, z, 4, false, true);
                         }
                     }
                     break;
