@@ -1,1 +1,2 @@
-player.join.message: "%player% §x§C§B§2§D§3§E§lj§x§C§E§2§F§3§E§lo§x§D§1§3§1§3§D§li§x§D§4§3§4§3§D§ln§x§D§7§3§6§3§D§le§x§D§A§3§8§3§C§ld §x§D§D§3§A§3§C§lt§x§E§0§3§C§3§C§lh§x§E§3§3§E§3§B§le §x§E§6§4§1§3§B§lg§x§E§9§4§3§3§B§la§x§E§C§4§5§3§A§lm§x§E§F§4§7§3§A§le"
+player.join.message: "%player% joined the game!"
+player.notEnoughTNT.message: "You don't have enough TNT"
