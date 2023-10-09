@@ -11,7 +11,7 @@ public class PlayerBreakBlockEvent implements Listener {
     public void BlockBreakEvent(BlockBreakEvent event) {
         if (event.getBlock().getType() == Material.NOTE_BLOCK) {
             event.setCancelled(true);
-            event.getBlock().setType(Material.AIR);
+            event.getBlock().setType(Material.AMETHYST_BLOCK);
         }
     }
 
