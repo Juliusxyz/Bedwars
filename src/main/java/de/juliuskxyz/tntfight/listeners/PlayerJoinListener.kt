@@ -1,9 +1,5 @@
-package de.juliuskxyz.tntfight.listeners;
+package de.juliuskxyz.tntfight.listeners
 
-import org.bukkit.event.Listener;
+import org.bukkit.event.Listener
 
-public class PlayerJoinListener implements Listener {
-
-
-
-}
+class PlayerJoinListener : Listener

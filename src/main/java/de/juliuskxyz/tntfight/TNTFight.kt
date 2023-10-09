@@ -1,6 +1,7 @@
 package de.juliuskxyz.tntfight
 
 import de.juliuskxyz.tntfight.listeners.PlayerDeathListener
+import de.juliuskxyz.tntfight.listeners.PlayerJoinListener
 import org.bukkit.plugin.java.JavaPlugin
 
 class TNTFight : JavaPlugin() {
@@ -12,6 +13,7 @@ class TNTFight : JavaPlugin() {
         logger.info("Hello World!")
 
         server.pluginManager.registerEvents(PlayerDeathListener(), this)
+        server.pluginManager.registerEvents(PlayerJoinListener(), this)
     }
     override fun onDisable() {
         // Plugin shutdown logic
