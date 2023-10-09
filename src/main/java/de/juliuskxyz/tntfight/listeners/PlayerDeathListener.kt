@@ -8,9 +8,9 @@ import org.bukkit.event.entity.EntityDamageEvent
 
 class PlayerDeathListener : Listener {
     @EventHandler
-    fun onPlayerDeath(event: EntityDamageEvent) {
-        if (event.entity is Player) {
-            val p = event.entity as Player
+    fun onPlayerDeath(e: EntityDamageEvent) {
+        if (e.entity is Player) {
+            val p = e.entity as Player
             if (p.health <= 0) {
                 p.gameMode = GameMode.SPECTATOR
             }

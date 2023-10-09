@@ -6,14 +6,19 @@ import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.FallingBlock;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
 import org.bukkit.scheduler.BukkitTask;
+import org.bukkit.util.Vector;
 
-import java.util.Vector;
-
-public class SandBotListener {
+public class SandBotListener implements Listener {
 
     private BukkitTask task;
     private int keepToSpawn = 0;
+
+    private final TNTFight plugin;
+    public SandBotListener(TNTFight plugin) {
+        this.plugin = plugin;
+    }
 
     @EventHandler
     public void onPlaceSandbot(org.bukkit.event.block.BlockPlaceEvent e) {
@@ -22,7 +27,7 @@ public class SandBotListener {
             return;
         keepToSpawn = 5; // amount of spawned item
         Location loc = e.getBlock().getLocation(); // location where entity will spawn
-        task = Bukkit.getScheduler().runTaskTimer(TNTFight.getInstance(), () -> {
+        task = Bukkit.getScheduler().runTaskTimer(plugin, () -> {
             // each 0.5s, we made spawn a falling block of given type
             run(loc, spawnType);
             if(keepToSpawn == 0)
@@ -33,7 +38,7 @@ public class SandBotListener {
 
     @SuppressWarnings("deprecation")
     private void run(Location loc, Material type) {
-        FallingBlock falling = loc.getWorld().spawnFallingBlock(loc, type, (byte) 0);
+        FallingBlock falling = loc.getWorld().spawnFallingBlock(loc, Material.SAND, (byte) 0);
         falling.setDropItem(true);
         falling.setVelocity(new Vector(0, -0.5, 0)); // set the velicoty of the block
     }
