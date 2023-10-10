@@ -1,38 +1,31 @@
-package de.juliuskxyz.tntfight.listeners;
+package de.juliuskxyz.tntfight.utils;
 
 import de.juliuskxyz.tntfight.TNTFight;
 import org.bukkit.GameMode;
 import org.bukkit.entity.Player;
-import org.bukkit.event.EventHandler;
-import org.bukkit.event.Listener;
-import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.scheduler.BukkitRunnable;
 
-public class Test implements Listener {
+public class PlayerDeathCountdown {
 
     private static TNTFight plugin;
-    public Test(TNTFight plugin) {
+    public PlayerDeathCountdown(TNTFight plugin) {
         this.plugin = plugin;
     }
 
-    int countdown = plugin.getConfig().getInt("deathCoolDown");
-
-    @EventHandler
-    public void Death(PlayerDeathEvent event) {
-        DeathCountDown(event.getPlayer());
-    }
-
-    public static String getString(String path) {
+    private static String getString(String path) {
         return plugin.getConfig().getString(path);
     }
 
-    public void DeathCountDown(Player p) {
+    public static void DeathCountDown(Player p) {
         new BukkitRunnable() {
+
+            int countdown = plugin.getConfig().getInt("deathCoolDown");
+
             @Override
             public void run() {
                 if (countdown > 0) {
                     countdown--;
-                    p.sendTitle(getString("messages.player.title"), getString("messages.player.title").replaceAll("%time%", String.valueOf((countdown + 1))), 0, 20, 10);
+                    p.sendTitle(getString("title.death.title"), getString("title.death.subtitle").replaceAll("%time%", String.valueOf((countdown + 1))), 0, 20, 10);
                 }else {
                     p.setInvisible(false);
                     p.setFlying(false);
@@ -44,7 +37,5 @@ public class Test implements Listener {
                 }
             }
         }.runTaskTimer(plugin, 0, 20);
-
     }
-
 }

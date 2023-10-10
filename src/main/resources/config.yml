@@ -11,7 +11,13 @@ messages:
     eliminated: "§c%player% died."
     respawnMessage: "§aYou are back Alive"
 
-    title:
-      death:
-        titel: "§c§lX §r§cYou Died §c§lX"
-        subtitle: "§7Time Until respawn: §6%time%"
+title:
+  death:
+    title: "§c§lX §r§cYou Died §c§lX"
+    subtitle: "§7Time Until respawn: §6%time%"
+
+
+
+command:
+  setLocation: "§aYou set the Position for '%locationName%'. Teleport to it with '/teleportto'"
+  noAvailableArgu: "§cThis is no available command!"

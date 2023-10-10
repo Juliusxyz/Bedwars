@@ -7,3 +7,7 @@ description: 5v5 TNT Fight Plugin
 commands:
   vanish:
     description: Test Vanish command
+  setlocation:
+    description: Set a position for all Positions
+  teleportto:
+    description: Teleport to a location

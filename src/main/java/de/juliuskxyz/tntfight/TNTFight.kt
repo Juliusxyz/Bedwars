@@ -1,9 +1,13 @@
 package de.juliuskxyz.tntfight
 
+import de.juliuskxyz.tntfight.commands.SetLocation
+import de.juliuskxyz.tntfight.commands.TeleportTo
 import de.juliuskxyz.tntfight.commands.vanish
+import de.juliuskxyz.tntfight.helper.PositionHelper
 import de.juliuskxyz.tntfight.listeners.PlayerDeathListener
 import de.juliuskxyz.tntfight.listeners.PlayerJoinListener
-import de.juliuskxyz.tntfight.listeners.Test
+import de.juliuskxyz.tntfight.tabcompleter.SetLocationTabCompleter
+import de.juliuskxyz.tntfight.tabcompleter.TeleportToTabCompleter
 import org.bukkit.plugin.java.JavaPlugin
 
 class TNTFight : JavaPlugin() {
@@ -17,11 +21,16 @@ class TNTFight : JavaPlugin() {
 
         config.options().copyDefaults()
         saveDefaultConfig()
+        PositionHelper.setup()
 
         server.pluginManager.registerEvents(PlayerDeathListener(this), this)
         server.pluginManager.registerEvents(PlayerJoinListener(this), this)
 
-        server.pluginManager.registerEvents(Test(this), this)
+        getCommand("setlocation")?.setExecutor(SetLocation(this))
+        getCommand("setlocation")?.setTabCompleter(SetLocationTabCompleter())
+
+        getCommand("teleportto")?.setExecutor(TeleportTo(this));
+        getCommand("teleportto")?.setTabCompleter(TeleportToTabCompleter())
 
         getCommand("vanish")?.setExecutor(vanish())
     }
