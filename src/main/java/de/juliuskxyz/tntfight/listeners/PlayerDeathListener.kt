@@ -1,19 +1,17 @@
 package de.juliuskxyz.tntfight.listeners
 
+import de.juliuskxyz.tntfight.TNTFight
 import org.bukkit.GameMode
-import org.bukkit.entity.Player
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
-import org.bukkit.event.entity.EntityDamageEvent
+import org.bukkit.event.entity.PlayerDeathEvent
 
-class PlayerDeathListener : Listener {
+class PlayerDeathListener(private val plugin: TNTFight) : Listener {
+
     @EventHandler
-    fun onPlayerDeath(e: EntityDamageEvent) {
-        if (e.entity is Player) {
-            val p = e.entity as Player
-            if (p.health <= 0) {
-                p.gameMode = GameMode.SPECTATOR
-            }
-        }
+    fun onPlayerDeath(e: PlayerDeathEvent) {
+        e.isCancelled = true;
+        e.player.gameMode = GameMode.SPECTATOR;
+
     }
 }

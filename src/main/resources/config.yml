@@ -1,2 +1,10 @@
-player.join.message: "%player% joined the game!"
-player.notEnoughTNT.message: "You don't have enough TNT"
+# Credits:
+
+# This Plugin was completely coded by 'Juliuskxyz' (IchBinLegal) and 'MiSkynet'
+
+messages:
+  player:
+    join: "§c%player% §l§x§C§B§2§D§3§Ej§x§C§E§2§F§3§Eo§x§D§1§3§1§3§Di§x§D§4§3§4§3§Dn§x§D§7§3§6§3§De§x§D§A§3§8§3§Cd §x§D§D§3§A§3§Ct§x§E§0§3§C§3§Ch§x§E§3§3§E§3§Be §x§E§6§4§1§3§Bg§x§E§9§4§3§3§Ba§x§E§C§4§5§3§Am§x§E§F§4§7§3§Ae"
+    notEnoughTNT: "§cYou don't have enough TNT"
+    eliminated: "§c%player% is eliminated."
+

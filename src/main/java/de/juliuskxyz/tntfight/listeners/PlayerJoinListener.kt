@@ -8,6 +8,6 @@ import org.bukkit.event.player.PlayerJoinEvent
 class PlayerJoinListener(private val plugin: TNTFight) : Listener {
     @EventHandler
     fun onPlayerJoin(e: PlayerJoinEvent) {
-        e.joinMessage = plugin.config.getString("player.join.message")!!.replace("%player%".toRegex(), e.player.name)
+        e.joinMessage = plugin.config.getString("messages.player.join")!!.replace("%player%".toRegex(), e.player.name)
     }
 }

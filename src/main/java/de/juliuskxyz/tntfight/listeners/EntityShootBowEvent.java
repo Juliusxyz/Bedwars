@@ -36,15 +36,15 @@ public class EntityShootBowEvent implements Listener {
                 if (getItemLoreInHand.contains(ExplodingArrows)) {
                     if (!p.getInventory().contains(Material.TNT)) {
                         e.setCancelled(true);
-                        p.sendMessage(plugin.getConfig().getString("player.notEnoughTNT.message"));
+                        p.sendMessage(plugin.getConfig().getString("messages.player.noEnoughTNT"));
                     } else {
                         Bukkit.getScheduler().runTaskLater(plugin, new Runnable() {
                             public void run() {
                                 TNTPrimed tnt = p.getWorld().spawn(e.getProjectile().getLocation().add(0, 1, 0), TNTPrimed.class);
 
                                 tnt.setIsIncendiary(false);
-                                tnt.setTicksLived(5);
-                                tnt.setFuseTicks(2000);
+                                tnt.setTicksLived(120);
+                                tnt.setFuseTicks(60);
                                 e.getProjectile().setPassenger(tnt);
 
                                 if (e.getProjectile().getHeight() > 10){
@@ -94,4 +94,5 @@ public class EntityShootBowEvent implements Listener {
             }
         }
     }
+
 }
