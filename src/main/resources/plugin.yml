@@ -4,3 +4,6 @@ main: de.juliuskxyz.tntfight.TNTFight
 api-version: 1.20
 authors: [ Juliuskxyz, MiSkynet ]
 description: 5v5 TNT Fight Plugin
+commands:
+  vanish:
+    description: Test Vanish command

@@ -6,6 +6,7 @@ import org.bukkit.GameMode
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
 import org.bukkit.event.entity.PlayerDeathEvent
+import org.bukkit.scheduler.BukkitRunnable
 
 class PlayerDeathListener(private val plugin: TNTFight) : Listener {
 
