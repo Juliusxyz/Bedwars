@@ -15,7 +15,7 @@ class TNTFight : JavaPlugin() {
         println("------------------")
         logger.info("Hello World!")
 
-        server.pluginManager.registerEvents(PlayerDeathListener(), this)
+        server.pluginManager.registerEvents(PlayerDeathListener(this), this)
         server.pluginManager.registerEvents(PlayerBreakBlockEvent(), this)
         server.pluginManager.registerEvents(PlayerJoinListener(this), this)
         server.pluginManager.registerEvents(EntityShootBowEvent(this), this)

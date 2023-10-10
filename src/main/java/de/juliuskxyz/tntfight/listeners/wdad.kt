@@ -7,14 +7,13 @@ import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
 import org.bukkit.event.entity.PlayerDeathEvent
 
-class PlayerDeathListener(private val plugin: TNTFight) : Listener {
-
+class wdad(private val plugin: TNTFight) : Listener {
     @EventHandler
-    fun onPlayerDeath(e: PlayerDeathEvent) {
-        e.isCancelled = true
-        e.player.gameMode = GameMode.SPECTATOR
+    fun PlayerDeathEvent(event: PlayerDeathEvent) {
+        event.isCancelled = true
+        event.player.gameMode = GameMode.SPECTATOR
         for (allPlayers in Bukkit.getOnlinePlayers()) {
-            plugin.config.getString("messages.player.eliminated")?.let { allPlayers.sendMessage(it.replace("%player%".toRegex(), e.player.name)) }
+            allPlayers.sendMessage("HALLO %s".replace("%s".toRegex(), "hallo"))
         }
     }
 }
