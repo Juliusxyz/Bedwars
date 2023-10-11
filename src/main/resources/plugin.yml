@@ -11,3 +11,5 @@ commands:
     description: Set a position for all Positions
   teleportto:
     description: Teleport to a location
+  start:
+  stopGame:

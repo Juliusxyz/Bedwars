@@ -1,6 +1,8 @@
 package de.juliuskxyz.tntfight
 
 import de.juliuskxyz.tntfight.commands.SetLocation
+import de.juliuskxyz.tntfight.commands.StartGame
+import de.juliuskxyz.tntfight.commands.StopGame
 import de.juliuskxyz.tntfight.commands.TeleportTo
 import de.juliuskxyz.tntfight.commands.vanish
 import de.juliuskxyz.tntfight.helper.PositionHelper
@@ -29,8 +31,12 @@ class TNTFight : JavaPlugin() {
         getCommand("setlocation")?.setExecutor(SetLocation(this))
         getCommand("setlocation")?.setTabCompleter(SetLocationTabCompleter())
 
-        getCommand("teleportto")?.setExecutor(TeleportTo(this));
+        getCommand("teleportto")?.setExecutor(TeleportTo(this))
         getCommand("teleportto")?.setTabCompleter(TeleportToTabCompleter())
+
+        getCommand("start")?.setExecutor(StartGame(this))
+
+        getCommand("stopGame")?.setExecutor(StopGame())
 
         getCommand("vanish")?.setExecutor(vanish())
     }
