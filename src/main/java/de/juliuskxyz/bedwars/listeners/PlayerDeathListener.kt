@@ -1,14 +1,14 @@
-package de.juliuskxyz.tntfight.listeners
+package de.juliuskxyz.bedwars.listeners
 
-import de.juliuskxyz.tntfight.TNTFight
-import de.juliuskxyz.tntfight.utils.PlayerDeathCountdown
+import de.juliuskxyz.bedwars.Bedwars
+import de.juliuskxyz.bedwars.utils.PlayerDeathCountdown
 import org.bukkit.Bukkit
 import org.bukkit.GameMode
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
 import org.bukkit.event.entity.PlayerDeathEvent
 
-class PlayerDeathListener(private val plugin: TNTFight) : Listener {
+class PlayerDeathListener(private val plugin: Bedwars) : Listener {
 
     @EventHandler
     fun onPlayerDeath(e: PlayerDeathEvent) {

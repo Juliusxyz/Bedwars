@@ -1,6 +1,6 @@
-package de.juliuskxyz.tntfight.tabcompleter;
+package de.juliuskxyz.bedwars.tabcompleter;
 
-import de.juliuskxyz.tntfight.helper.PositionHelper;
+import de.juliuskxyz.bedwars.helper.PositionHelper;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;

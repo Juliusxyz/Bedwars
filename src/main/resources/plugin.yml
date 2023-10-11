@@ -1,9 +1,9 @@
-name: TNTFight
+name: Bedwars
 version: '${project.version}'
-main: de.juliuskxyz.tntfight.TNTFight
+main: de.juliuskxyz.bedwars.Bedwars
 api-version: 1.20
 authors: [ Juliuskxyz, MiSkynet ]
-description: 5v5 TNT Fight Plugin
+description: Bedwars Plugin
 commands:
   setlocation:
     description: Set a position for all Positions

@@ -1,7 +1,7 @@
-package de.juliuskxyz.tntfight.commands;
+package de.juliuskxyz.bedwars.commands;
 
-import de.juliuskxyz.tntfight.TNTFight;
-import de.juliuskxyz.tntfight.utils.ItemSpawner;
+import de.juliuskxyz.bedwars.Bedwars;
+import de.juliuskxyz.bedwars.utils.ItemSpawner;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -9,8 +9,8 @@ import org.jetbrains.annotations.NotNull;
 
 public class StartGame implements CommandExecutor {
 
-    private final TNTFight plugin;
-    public StartGame(TNTFight plugin) {
+    private final Bedwars plugin;
+    public StartGame(Bedwars plugin) {
         this.plugin = plugin;
     }
 

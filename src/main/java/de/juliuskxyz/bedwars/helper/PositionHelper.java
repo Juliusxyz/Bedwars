@@ -1,4 +1,4 @@
-package de.juliuskxyz.tntfight.helper;
+package de.juliuskxyz.bedwars.helper;
 
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;

@@ -1,4 +1,4 @@
-package de.juliuskxyz.tntfight.tabcompleter;
+package de.juliuskxyz.bedwars.tabcompleter;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;

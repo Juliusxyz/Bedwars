@@ -1,14 +1,14 @@
-package de.juliuskxyz.tntfight.utils;
+package de.juliuskxyz.bedwars.utils;
 
-import de.juliuskxyz.tntfight.TNTFight;
+import de.juliuskxyz.bedwars.Bedwars;
 import org.bukkit.GameMode;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
 public class PlayerDeathCountdown {
 
-    private static TNTFight plugin;
-    public PlayerDeathCountdown(TNTFight plugin) {
+    private static Bedwars plugin;
+    public PlayerDeathCountdown(Bedwars plugin) {
         this.plugin = plugin;
     }
 

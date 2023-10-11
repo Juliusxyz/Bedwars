@@ -1,7 +1,7 @@
-package de.juliuskxyz.tntfight.commands;
+package de.juliuskxyz.bedwars.commands;
 
-import de.juliuskxyz.tntfight.TNTFight;
-import de.juliuskxyz.tntfight.helper.PositionHelper;
+import de.juliuskxyz.bedwars.Bedwars;
+import de.juliuskxyz.bedwars.helper.PositionHelper;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -9,12 +9,10 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.Arrays;
-
 public class TeleportTo implements CommandExecutor {
 
-    private static TNTFight plugin;
-    public TeleportTo(TNTFight plugin) {
+    private static Bedwars plugin;
+    public TeleportTo(Bedwars plugin) {
         this.plugin = plugin;
     }
 

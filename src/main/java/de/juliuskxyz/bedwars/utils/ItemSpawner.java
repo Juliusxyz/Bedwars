@@ -1,6 +1,6 @@
-package de.juliuskxyz.tntfight.utils;
+package de.juliuskxyz.bedwars.utils;
 
-import de.juliuskxyz.tntfight.helper.PositionHelper;
+import de.juliuskxyz.bedwars.helper.PositionHelper;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;

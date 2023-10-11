@@ -1,17 +1,17 @@
-package de.juliuskxyz.tntfight
+package de.juliuskxyz.bedwars
 
-import de.juliuskxyz.tntfight.commands.SetLocation
-import de.juliuskxyz.tntfight.commands.StartGame
-import de.juliuskxyz.tntfight.commands.StopGame
-import de.juliuskxyz.tntfight.commands.TeleportTo
-import de.juliuskxyz.tntfight.helper.PositionHelper
-import de.juliuskxyz.tntfight.listeners.PlayerDeathListener
-import de.juliuskxyz.tntfight.listeners.PlayerJoinListener
-import de.juliuskxyz.tntfight.tabcompleter.SetLocationTabCompleter
-import de.juliuskxyz.tntfight.tabcompleter.TeleportToTabCompleter
+import de.juliuskxyz.bedwars.commands.SetLocation
+import de.juliuskxyz.bedwars.commands.StartGame
+import de.juliuskxyz.bedwars.commands.StopGame
+import de.juliuskxyz.bedwars.commands.TeleportTo
+import de.juliuskxyz.bedwars.helper.PositionHelper
+import de.juliuskxyz.bedwars.listeners.PlayerDeathListener
+import de.juliuskxyz.bedwars.listeners.PlayerJoinListener
+import de.juliuskxyz.bedwars.tabcompleter.SetLocationTabCompleter
+import de.juliuskxyz.bedwars.tabcompleter.TeleportToTabCompleter
 import org.bukkit.plugin.java.JavaPlugin
 
-class TNTFight : JavaPlugin() {
+class Bedwars : JavaPlugin() {
 
     override fun onEnable() {
         // Plugin startup logic

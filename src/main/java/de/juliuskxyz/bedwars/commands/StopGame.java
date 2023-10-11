@@ -1,6 +1,6 @@
-package de.juliuskxyz.tntfight.commands;
+package de.juliuskxyz.bedwars.commands;
 
-import de.juliuskxyz.tntfight.utils.ItemSpawner;
+import de.juliuskxyz.bedwars.utils.ItemSpawner;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
