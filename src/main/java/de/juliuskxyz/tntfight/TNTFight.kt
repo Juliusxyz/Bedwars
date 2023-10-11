@@ -4,7 +4,6 @@ import de.juliuskxyz.tntfight.commands.SetLocation
 import de.juliuskxyz.tntfight.commands.StartGame
 import de.juliuskxyz.tntfight.commands.StopGame
 import de.juliuskxyz.tntfight.commands.TeleportTo
-import de.juliuskxyz.tntfight.commands.vanish
 import de.juliuskxyz.tntfight.helper.PositionHelper
 import de.juliuskxyz.tntfight.listeners.PlayerDeathListener
 import de.juliuskxyz.tntfight.listeners.PlayerJoinListener
@@ -37,8 +36,6 @@ class TNTFight : JavaPlugin() {
         getCommand("start")?.setExecutor(StartGame(this))
 
         getCommand("stopGame")?.setExecutor(StopGame())
-
-        getCommand("vanish")?.setExecutor(vanish())
     }
     override fun onDisable() {
         // Plugin shutdown logic

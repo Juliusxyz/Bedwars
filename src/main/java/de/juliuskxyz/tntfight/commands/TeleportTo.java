@@ -29,6 +29,13 @@ public class TeleportTo implements CommandExecutor {
 
         Player p = (Player) commandSender;
 
+        if (args.length == 1) {
+            if (PositionHelper.get().getLocation("lobby") != null) {
+                Location loc = PositionHelper.get().getLocation("lobby");
+                p.teleport(loc);
+            }
+        }
+
         if (args.length == 2) {
             if (PositionHelper.get().getLocation(args[0].toLowerCase() + "." + args[1].toLowerCase()) != null) {
                 Location loc = PositionHelper.get().getLocation(args[0].toLowerCase() + "." + args[1].toLowerCase());
