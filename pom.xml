@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>de.juliuskxyz</groupId>
-    <artifactId>TNTFight</artifactId>
+    <artifactId>Bedwars</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>TNTFight</name>
+    <name>Bedwars</name>
 
     <properties>
         <java.version>17</java.version>
